@@ -2593,12 +2593,12 @@ namespace eosio {
                   fc_wlog( logger, "caught an exception getting block id for ${pl}", ("pl", peer_lib) );
                   on_fork = true;
                }
-               if( on_fork ) {
+               /*if( on_fork ) {
                   c->strand.post( [c]() {
                      fc_elog( logger, "Peer chain is forked" );
                      c->enqueue( go_away_message( forked ) );
                   } );
-               }
+               }*/
             }
          });
 
